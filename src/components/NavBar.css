@@ -61,6 +61,7 @@ nav {
 
 ul.expandable {
   display: flex;
+  margin: 1rem 0;
   flex-direction: row;
   list-style: none;
   opacity: 1;
