@@ -11,12 +11,13 @@ interface Particle {
 const speed = 0.3; // Adjust speed of particles
 const count = 150; // Maximum number of particles
 const dist_threshold = 150; // Distance threshold for connections
-const radius = 3; // Radius of each particle
+const radius = 2; // Radius of each particle
 
 export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | null>(null);
+  const initializedRef = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -49,6 +50,8 @@ export default function ParticleBackground() {
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const isLight = document.body.classList.contains('light');
+
+      // for particles and lines
       ctx.fillStyle = isLight ? '#000000' : '#ffffff';
       ctx.strokeStyle = isLight ? '#000000' : '#ffffff';
 
@@ -64,7 +67,7 @@ export default function ParticleBackground() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, radius, 0, Math.PI * 2);
-        ctx.stroke();
+        ctx.fill();
 
         // Draw connections
         particlesRef.current.slice(i + 1).forEach(otherParticle => {
@@ -92,8 +95,19 @@ export default function ParticleBackground() {
       animationRef.current = requestAnimationFrame(animate);
     };
 
+    // Initialize canvas with proper setup
     resizeCanvas();
     createParticles();
+
+    // Set canvas to visible only after initialization
+    if (canvas && !initializedRef.current) {
+      canvas.style.opacity = '0';
+      requestAnimationFrame(() => {
+        canvas.style.opacity = '1';
+        initializedRef.current = true;
+      });
+    }
+
     animate();
 
     window.addEventListener('resize', () => {
@@ -109,5 +123,8 @@ export default function ParticleBackground() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="particle-background" />;
+  return <canvas
+    ref={canvasRef}
+    className="particle-background"
+  />;
 }

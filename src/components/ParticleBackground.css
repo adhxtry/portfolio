@@ -6,7 +6,8 @@
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.8;
+  background-color: var(--bg-dark);
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
