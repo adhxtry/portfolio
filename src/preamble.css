@@ -30,6 +30,18 @@ html {
   }
 }
 
+/* Selection colors */
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+::-moz-selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
 * {
   transition: background 0.2s ease-in-out,
     color 0.2s ease-in-out,

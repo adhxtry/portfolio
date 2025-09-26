@@ -68,7 +68,10 @@
   --success: var(--ctp-green);
   --info: var(--ctp-blue);
 
-  /* Custom defined */
+  /* Selection colors */
+  --selection-bg: var(--ctp-surface2);
+  --selection-text: var(--ctp-text);
+
   /* Gradients */
   --text-hover: color-mix(in srgb, var(--text-muted) 40%, var(--text));
   --gradient-highlight: linear-gradient(to bottom, var(--bg) 0%, var(--bg-light) 100%);
@@ -131,7 +134,10 @@ body.light {
   --success: var(--ctp-green);
   --info: var(--ctp-blue);
 
-  /* Custom defined */
+  /* Selection colors */
+  --selection-bg: var(--ctp-surface1);
+  --selection-text: var(--ctp-text);
+
   /* Gradients */
   --text-hover: color-mix(in srgb, var(--text-muted) 40%, var(--text));
   --gradient-highlight: linear-gradient(to bottom, var(--bg) 0%, var(--bg-light) 100%);

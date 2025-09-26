@@ -27,6 +27,7 @@
   margin-bottom: 1rem;
   box-shadow: 0 2px 8px var(--bg);
   border: 3px solid var(--highlight);
+  user-select: none;
 }
 
 .profile-desc {

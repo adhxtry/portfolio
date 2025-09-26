@@ -28,6 +28,9 @@ const PageLayout: React.FC<PageLayoutProps> = ({ title, subtitle, children }) =>
       {subtitle && <p className="page-subtitle">{subtitle}</p>}
     </header>
     <main className="page-content">{children}</main>
+    <footer className="page-footer">
+      <p>© 2025 Adheesh Trivedi. All rights reserved.</p>
+    </footer>
   </section>
 );
 
