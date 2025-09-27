@@ -15,7 +15,7 @@
 nav {
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 2rem;
   top: 0;
   left: 0;
@@ -25,6 +25,13 @@ nav {
   box-shadow: 0 4rem 8rem var(--bg-light);
   z-index: 1000;
   user-select: none;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .title-container {
@@ -104,13 +111,16 @@ ul li .navbar-links:hover:not(.active) {
 }
 
 @media (max-width: 700px) {
-  nav {
+  .nav-content {
     flex-direction: column;
+  }
+
+  nav {
     padding: 1rem;
     padding-top: 1.5rem;
   }
 
-  nav div .menu-icon {
+  .title-container .menu-icon {
     display: flex;
     justify-content: center;
   }

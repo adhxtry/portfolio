@@ -78,38 +78,40 @@ function NavBar({ pages }: NavBarProps) {
 
   return (
     <nav className={`navbar`}>
-      <div className='title-container'>
-        {/* Theme Toggle Button */}
-        <button className='theme-toggle' onClick={handleThemeToggle}>
-          {isDarkMode ? <SunIcon className="theme-icon" title="Switch to light mode" /> : <MoonIcon className="theme-icon" title="Switch to dark mode" />}
-        </button>
+      <div className='nav-content'>
+        <div className='title-container'>
+          {/* Theme Toggle Button */}
+          <button className='theme-toggle' onClick={handleThemeToggle}>
+            {isDarkMode ? <SunIcon className="theme-icon" title="Switch to light mode" /> : <MoonIcon className="theme-icon" title="Switch to dark mode" />}
+          </button>
 
-        <button className='menu-icon' onClick={() => setIsOpen(!isMenuOpen)}>
-          {isMenuOpen ? '✖' : '☰'}
-        </button>
-      </div>
+          <button className='menu-icon' onClick={() => setIsOpen(!isMenuOpen)}>
+            {isMenuOpen ? '✖' : '☰'}
+          </button>
+        </div>
 
-      {/* Navigation Links */}
-      <ul className={`${isMenuOpen ? 'open' : ''} expandable`}>
-        <li key="home">
-          <NavLink to="/" className='navbar-links' onClick={() => {
-            setIsOpen(false)
-            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-          }}>
-            Home
-          </NavLink>
-        </li>
-        {pages.map((page) => (
-          <li key={page}>
-            <NavLink to={`/${page.toLowerCase()}`} className='navbar-links' onClick={() => {
+        {/* Navigation Links */}
+        <ul className={`${isMenuOpen ? 'open' : ''} expandable`}>
+          <li key="home">
+            <NavLink to="/" className='navbar-links' onClick={() => {
               setIsOpen(false)
               window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             }}>
-              {page}
+              Home
             </NavLink>
           </li>
-        ))}
-      </ul>
+          {pages.map((page) => (
+            <li key={page}>
+              <NavLink to={`/${page.toLowerCase()}`} className='navbar-links' onClick={() => {
+                setIsOpen(false)
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+              }}>
+                {page}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   )
 }
