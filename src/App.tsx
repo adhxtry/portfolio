@@ -16,11 +16,9 @@ import NavBar from "./components/NavBar"
 
 import ParticleBackground from "./components/ParticleBackground"
 
-import { lazy } from "react";
-
-const Home = lazy(() => import("./Home/Home"));
-const Projects = lazy(() => import("./Projects/Projects"));
-const Experience = lazy(() => import("./Experience/Experience"));
+import Home from "./Home/Home"
+import Projects from "./Projects/Projects"
+import Experience from "./Experience/Experience"
 
 import { Route, Routes } from "react-router-dom";
 
