@@ -44,6 +44,14 @@ This is a modern, creative portfolio built with **React**, **TypeScript**, and *
 - There are similar json files for experience, projects, etc.
 - Tweak styles in `src/index.css` and `src/themes.css` for a unique look.
 
+## Google Analytics
+
+This project can include Google Analytics at build time by setting an environment variable `VITE_GA_ID`.
+
+This is already configured in the GitHub Actions workflow for building and deploying the site. You can set the `VITE_GA_ID` variable in your repository environment variables (not secrets).
+
+During the build Vite will replace the `%VITE_GA_ID%` placeholder in `index.html` with the value you provide. The site will only load the gtag script when `VITE_GA_ID` is non-empty.
+
 ## 📦 Built With
 
 - [React](https://react.dev/)
