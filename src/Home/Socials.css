@@ -1,0 +1,64 @@
+/*
+ * Copyright (C) 2025 Adheesh Trivedi <adheeshtrivedi@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ */
+
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  fill: var(--text-muted);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.12);
+  box-shadow: 0 2px 8px var(--primary);
+  fill: var(--text);
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--text-muted);
+  color: var(--bg);
+  border-radius: 50vh;
+  height: 4rem;
+  padding: 0px 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.resume-link:hover {
+  box-shadow: 0 2px 8px var(--primary);
+}
+
+.resume-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: transform 0.2s;
+}
+
+.resume-link:hover .resume-icon {
+  transform: rotate(-10deg) scale(1.15);
+}

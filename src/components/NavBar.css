@@ -1,0 +1,155 @@
+/*
+ * Copyright (C) 2025 Adheesh Trivedi <adheeshtrivedi@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ */
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-light);
+  border-bottom: var(--border-muted) 2px solid;
+  box-shadow: 0 4rem 8rem var(--bg-light);
+  z-index: 1000;
+  user-select: none;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.title-container {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  background: var(--text);
+  border: var(--border) 2px solid;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  user-select: none;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.theme-icon {
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  filter: drop-shadow(0 1px 2px var(--bg-dark));
+  fill: var(--bg);
+  transition: transform 0.2s;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: scale(1.5) rotate(-10deg);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--primary);
+  background: var(--bg);
+  border: var(--border) 2px solid;
+  border-radius: 1rem;
+  user-select: none;
+  width: 4.5rem;
+}
+
+ul.expandable {
+  display: flex;
+  margin: 1rem 0;
+  flex-direction: row;
+  list-style: none;
+  opacity: 1;
+}
+
+ul li .navbar-links {
+  font-size: 3rem;
+  text-decoration: none;
+  padding: 1rem;
+  color: var(--secondary);
+  border-color: var(--border);
+  border-radius: 1rem;
+}
+
+ul li .navbar-links.active {
+  border-color: var(--border-muted);
+  border-width: 2px;
+  background: var(--bg);
+  color: var(--primary);
+}
+
+ul li .navbar-links:hover:not(.active) {
+  border-width: 1px;
+  background: var(--gradient-highlight);
+}
+
+@media (max-width: 700px) {
+  .nav-content {
+    flex-direction: column;
+  }
+
+  nav {
+    padding: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .title-container .menu-icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul.expandable {
+    padding: 0;
+    margin: 0;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  nav ul.open {
+    border: var(--border) 2px solid;
+    margin-top: 1rem;
+    max-height: 30rem;
+  }
+
+  nav ul li .navbar-links {
+    color: var(--secondary);
+    display: block;
+    width: 100%;
+    border-radius: 0;
+  }
+}

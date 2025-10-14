@@ -1,0 +1,57 @@
+/*
+ * Copyright (C) 2025 Adheesh Trivedi <adheeshtrivedi@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  min-width: 300px;
+}
+
+/* If mobile, scale down */
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+    /* 1rem = 8px */
+  }
+}
+
+/* Selection colors */
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+::-moz-selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+* {
+  transition: background 0.2s ease-in-out,
+    color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+/* Check for is motion enabled */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,42 @@
+/*
+ * Copyright (C) 2025 Adheesh Trivedi <adheeshtrivedi@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ */
+
+/* BUBBLE for list items */
+.bubble {
+  background: var(--bg);
+  border: var(--border) 1px solid;
+  border-radius: 1rem;
+  padding: 0.2rem 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.bubble:hover {
+  background: var(--gradient-highlight);
+  border-bottom-color: var(--highlight);
+  color: var(--text);
+}
+
+
+/* HIDDEN ELEMENTS ANIMATION */
+/* NOTE: max-height should be set in component CSS itself */
+.expandable {
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out, margin 0.2s ease-in-out;
+}
+
+.expandable.open {
+  overflow: auto;
+}

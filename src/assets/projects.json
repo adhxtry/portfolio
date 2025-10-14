@@ -1,0 +1,128 @@
+[
+  {
+    "heading": "Research Projects",
+    "projects": [
+      {
+        "title": "Series of Research Projects on Theoretical Computer Science",
+        "affiliation": "Dr. Prafullkumar Tale",
+        "start": {
+          "month": "Dec",
+          "year": 2024
+        },
+        "description": [
+          "We started with graph coloring and scheduling problems.",
+          "Studied the P vs NP problem and its implications from the book <i>Algorithm Design</i> by Jon Kleinberg and Éva Tardos.",
+          "Understood the concept of treewidth and its applications in dynamic programming from the book <i>Parameterized Algorithms</i>.",
+          "Worked on applying the treewidth parameterized algorithm to solve VC Dimension."
+        ],
+        "skills": [
+          "Graph Coloring",
+          "Parameterized Algorithms",
+          "Tree Decomposition and Treewidth"
+        ]
+      },
+      {
+        "title": "Reading project on Graph theory",
+        "affiliation": "Dr. Prafullkumar Tale",
+        "start": {
+          "month": "Jan",
+          "year": 2024
+        },
+        "end": {
+          "month": "Apr",
+          "year": 2024
+        },
+        "description": [
+          "Read the book A First look at <i>Graph Theory</i> by Clark and Halton.",
+          "Solved exercises in the book and test the learned concepts of Graph Theory."
+        ],
+        "skills": [
+          "Graph Theory"
+        ]
+      }
+    ]
+  },
+  {
+    "heading": "Software Projects",
+    "projects": [
+      {
+        "title": "Extensively customizable exam scheduler",
+        "affiliation": "Dr. Prafullkumar Tale",
+        "start": {
+          "month": "Oct",
+          "year": 2024
+        },
+        "end": {
+          "month": "Jan",
+          "year": 2025
+        },
+        "description": [
+          "An exam scheduler that can be extensively customized to fit the needs of different users and institutions.",
+          "It can assign multiple lecture halls for certain course, if one lecture hall can't fulfill the strength of the course. It also tries to minimize the number of cases where students have to give more than one exam in 24 hours.",
+          "The algorithm uses Graph coloring + Randomized optimization techniques."
+        ],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/adhxtry/exams_scheduler"
+          }
+        ],
+        "skills": [
+          "Python",
+          "Networkx",
+          "Optimization"
+        ]
+      },
+      {
+        "title": "A chatbot based on the BoW technique",
+        "start": {
+          "month": "Oct",
+          "year": 2021
+        },
+        "end": {
+          "month": "Dec",
+          "year": 2021
+        },
+        "description": [
+          "A bag of words based chatbot that can perform tasks like <b>to do list, define words, note taking, fetching time in particular city, country or timezones, etc</b>. The bot was able to maintain context of previous messages.",
+          "The sequential neural network model was trained using tensorflow, and the dataset for the bot was made from scratch, listing out all the requirements that I had, from the bot."
+        ],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/adhxtry/TensorBot"
+          }
+        ],
+        "skills": [
+          "Python",
+          "TensorFlow",
+          "PyQt"
+        ]
+      },
+      {
+        "title": "A general purpose discord bot",
+        "start": {
+          "month": "Apr",
+          "year": 2021
+        },
+        "end": {
+          "month": "Jun",
+          "year": 2021
+        },
+        "description": [
+          "The bot had features that included <b>server moderation, games, music playback, jokes, and meme creations</b>."
+        ],
+        "links": [
+          {
+            "text": "GitHub",
+            "url": "https://github.com/adhxtry/UFO-BOT"
+          }
+        ],
+        "skills": [
+          "Python",
+          "Discord.py"
+        ]
+      }
+    ]
+  }
+]
