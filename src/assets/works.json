@@ -17,7 +17,7 @@
       "Reinforcement Learning (Q-learning, DQN)",
       "Traffic modeling"
     ],
-    "source": "https://github.com/AdhTri001/traffic-light-optimization"
+    "source": "https://github.com/adhxtry/traffic-light-optimization"
   },
   {
     "title": "Texture classification and face clustering for image search",
@@ -34,7 +34,7 @@
     "skills": [
       "PyTorch with CUDA"
     ],
-    "source": "https://github.com/AdhTri001/nomadium"
+    "source": "https://github.com/adhxtry/nomadium"
   },
   {
     "title": "A chatbot based on the BoW technique | Intermediate/+2 final project",
@@ -48,7 +48,7 @@
       "Tensorflow",
       "PyQT5"
     ],
-    "source": "https://github.com/AdhTri001/tensorBot"
+    "source": "https://github.com/adhxtry/tensorBot"
   },
   {
     "title": "Tool for Model and Logical embeddings Model checking",
@@ -130,6 +130,6 @@
       "PostgreSQL",
       "discord.py"
     ],
-    "source": "https://github.com/AdhTri001/UFO-BOT"
+    "source": "https://github.com/adhxtry/UFO-BOT"
   }
 ]
