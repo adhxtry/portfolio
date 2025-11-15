@@ -29,6 +29,19 @@
   color: var(--text);
 }
 
+.monospaced {
+  font-family: 'Jetbrains Mono', monospace;
+}
+
+.link {
+  color: var(--text-muted);
+  text-decoration: underline dotted;
+}
+
+.link:hover {
+  color: var(--text-hover);
+}
+
 
 /* HIDDEN ELEMENTS ANIMATION */
 /* NOTE: max-height should be set in component CSS itself */

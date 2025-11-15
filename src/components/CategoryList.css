@@ -12,10 +12,6 @@
  * GNU Affero General Public License for more details.
  */
 
-.category-list h2 {
-  margin-bottom: 0.5rem;
-}
-
 .category-list ul {
   list-style: none;
   display: flex;

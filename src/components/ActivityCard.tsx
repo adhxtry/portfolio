@@ -69,7 +69,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
               <a
                 key={idx}
                 href={link.url}
-                className="activity-card-link"
+                className="link"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={e => e.stopPropagation()}

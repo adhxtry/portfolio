@@ -56,16 +56,6 @@
   gap: 0.7em;
 }
 
-.activity-card-link {
-  color: var(--text-muted);
-  text-decoration: underline dotted;
-}
-
-.activity-card-link:hover {
-  color: var(--text-hover);
-}
-
-
 .activity-card-description {
   clear: right;
   font-size: 1.8rem;

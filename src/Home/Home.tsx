@@ -28,8 +28,21 @@ function Home() {
           <CategoryList key={idx} category={cat.category} items={cat.items} />
         ))}
       </div>
+      {homeData.pubkey && (
+        <>
+          <h2>Public Keys</h2>
+          {homeData.pubkey.map((key, idx) => (
+            <div key={idx}>
+              {key.keyname}:&nbsp;
+              <a href={key.url} className="link" target="_blank" rel="noopener noreferrer">
+                {key.fingerprint}
+              </a>
+            </div>
+          ))}
+        </>
+      )}
       <Socials socials={homeData.socials} resumeUrl={homeData.resume} />
-    </PageLayout>
+    </PageLayout >
   );
 }
 

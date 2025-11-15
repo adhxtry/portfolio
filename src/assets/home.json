@@ -30,5 +30,12 @@
         "TypeScript"
       ]
     }
+  ],
+  "pubkey": [
+    {
+      "keyname": "PGP Key",
+      "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/DF6FBC5CC5A110D39E16D7731300661030043B5D",
+      "fingerprint": "DF6F BC5C C5A1 10D3 9E16  D773 1300 6610 3004 3B5D"
+    }
   ]
 }
