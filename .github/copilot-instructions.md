@@ -68,7 +68,7 @@ Fonts are defined in `src/index.css`:
 - Add borders with `border: 2px solid var(--border-muted)` or similar
 - Add shadows with `box-shadow: 0 2px 8px var(--bg-dark)`
 - Use `border-radius: 8px` or `1rem` for rounded corners
-- Include smooth transitions: `transition: all 0.3s ease`
+- Include smooth transitions: `transition: all 0.2s ease`
 - Add hover effects with `transform: translateY(-2px)` or `-4px`
 - Use `backdrop-filter: blur(5px)` for glass effects
 - Respect `@media (prefers-reduced-motion: reduce)` - defined in `preamble.css`
@@ -235,7 +235,7 @@ All files must include AGPL v3 copyright header:
 ### Interactive Elements
 - Cursor changes to pointer on interactive elements
 - Hover states for all clickable items
-- Smooth transitions (0.2s - 0.3s ease)
+- Smooth transitions (0.2s - 0.2s ease)
 - Visual feedback with transform/shadow changes
 
 ## Common Patterns

@@ -43,10 +43,10 @@ html {
 }
 
 * {
-  transition: background 0.2s ease-in-out,
-    color 0.2s ease-in-out,
-    border-color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
+  transition: background 0.2s ease-in,
+    color 0.2s ease-in,
+    border-color 0.2s ease-in,
+    box-shadow 0.2s ease-in;
 }
 
 /* Check for is motion enabled */

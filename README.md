@@ -1,9 +1,9 @@
 
 # Adheesh Trivedi – Creative Portfolio
 
-This is a modern, creative portfolio built with **React**, **TypeScript**, and **Vite**. It features a beautiful, unified design and showcases my interests, projects, and more. Moreover, it uses catppuccin theme for a pleasing aesthetic.
+This is a modern, creative portfolio built with **React**, **TypeScript**, and **Vite**. It features a beautiful, unified design and showcases my interests, projects, and more. Moreover, it uses catppuccin theme for a pleasing aesthetic. This is not out of the box template. This repository hosts my personal portfolio code which you can fork and customize for your own use. However, the customization is very easy, as all the data is stored in JSON files and the components are well structured.
 
-## ✨ Features
+## Features
 
 - **Modern UI**: Consistent, elegant layout with a custom `PageLayout` component.
 - **Dark/Light Theme**: Toggle between dark and light modes.
@@ -11,7 +11,7 @@ This is a modern, creative portfolio built with **React**, **TypeScript**, and *
 - **Profile & Socials**: See profile, interests, and connect via social links.
 - **Projects**: Explore technical and creative projects.
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Install dependencies:**
    ```sh
@@ -28,7 +28,7 @@ This is a modern, creative portfolio built with **React**, **TypeScript**, and *
    npm run preview
    ```
 
-## 🗂️ Project Structure
+## Project Structure
 
 - `src/components/` – Reusable UI components (NavBar, Profile, CategoryList, PageLayout, etc.)
 - `src/Home` – Home page. Similar folders for pages are `src/Projects`, `src/Experience`, etc.
@@ -37,7 +37,7 @@ This is a modern, creative portfolio built with **React**, **TypeScript**, and *
 - `src/themes.css` – Theme variables (light/dark)
 - `src/preamble.css` – CSS resets and base styles
 
-## 🖌️ Customization
+## Customization
 
 - Add your own projects in `src/Projects/Projects.tsx`.
 - Update your profile and interests in `src/assets/profileData.json` and `src/components/Profile.tsx`.
