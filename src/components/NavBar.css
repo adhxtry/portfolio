@@ -27,10 +27,10 @@
   align-items: center;
   gap: 2rem;
   padding: 0.8rem 1.5rem;
-  background: var(--bg-light);
+  background: var(--bg);
   border: 2px solid var(--border-muted);
   border-radius: 5rem;
-  box-shadow: 0 4px 24px var(--bg-dark);
+  box-shadow: 0 4px 24px var(--bg);
   backdrop-filter: blur(10px);
 }
 
@@ -38,23 +38,20 @@
 .theme-toggle {
   position: relative;
   cursor: pointer;
-  background: var(--bg);
+  background: var(--bg-light);
   border: 2px solid var(--border);
   width: 4rem;
   height: 4rem;
-  /* To separate from nav links */
-  margin-right: 2rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  flex-shrink: 0;
+  margin-right: 2rem;
 }
 
 .theme-toggle:hover {
-  border-color: var(--primary);
-  box-shadow: 0 0 12px var(--primary);
+  border-color: var(--highlight);
 }
 
 .theme-icon-wrapper {
@@ -69,11 +66,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  fill: var(--text);
+  fill: var(--secondary);
+  /* Use ease in for theme icon give nice delayed effect */
   transition: transform 0.4s ease-in, opacity 0.4s ease-in;
 }
 
-/* Dark mode: show sun (to switch to light), hide moon */
+/* Dark mode: show moon, hide sun */
 .theme-toggle.dark .moon-icon {
   transform: translateY(0);
   opacity: 1;
@@ -84,7 +82,7 @@
   opacity: 0;
 }
 
-/* Light mode: show moon (to switch to dark), hide sun */
+/* Light mode: show sun, hide moon */
 .theme-toggle.light .moon-icon {
   transform: translateY(-100%);
   opacity: 0;
@@ -93,49 +91,6 @@
 .theme-toggle.light .sun-icon {
   transform: translateY(0);
   opacity: 1;
-}
-
-/* ===== MOBILE MENU TOGGLE ===== */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  background: var(--bg);
-  border: 2px solid var(--border);
-  border-radius: 1rem;
-  width: 4rem;
-  height: 4rem;
-  padding: 0.8rem;
-}
-
-.menu-toggle:hover {
-  border-color: var(--primary);
-}
-
-.menu-bar {
-  display: block;
-  width: 100%;
-  height: 0.3rem;
-  background: var(--text);
-  border-radius: 0.2rem;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-
-}
-
-/* Triple bars to cross animation for mobile view */
-.menu-bar.open:nth-child(1) {
-  transform: translateY(0.8rem) rotate(45deg);
-}
-
-.menu-bar.open:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-bar.open:nth-child(3) {
-  transform: translateY(-0.8rem) rotate(-45deg);
 }
 
 /* ===== NAVIGATION LINKS ===== */
@@ -188,6 +143,49 @@
   color: var(--primary);
 }
 
+/* ===== MOBILE MENU TOGGLE ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  background: var(--bg-light);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.menu-toggle:hover {
+  border-color: var(--highlight);
+}
+
+.menu-bar {
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  background: var(--text);
+  border-radius: 0.2rem;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+
+}
+
+/* Triple bars to cross animation for menu icon */
+.menu-bar.open:nth-child(1) {
+  transform: translateY(0.8rem) rotate(45deg);
+}
+
+.menu-bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-bar.open:nth-child(3) {
+  transform: translateY(-0.8rem) rotate(-45deg);
+}
+
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 700px) {
   .navbar {
@@ -202,8 +200,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0;
-    padding: 1rem 1.5rem;
-    border-radius: 2rem;
+    padding: 1rem 1rem;
   }
 
   .menu-toggle {
@@ -240,10 +237,6 @@
     padding: 1.2rem 1.5rem;
     border-radius: 1rem;
     font-size: 2rem;
-  }
-
-  .navbar-link:hover {
-    background: var(--gradient-highlight);
   }
 
   .navbar-link.active {

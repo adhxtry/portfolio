@@ -31,7 +31,7 @@
 
 .social-icon:hover {
   transform: scale(1.12);
-  box-shadow: 0 2px 8px var(--primary);
+  box-shadow: 0 0 4px var(--highlight);
   fill: var(--text);
 }
 
@@ -49,7 +49,7 @@
 }
 
 .resume-link:hover {
-  box-shadow: 0 2px 8px var(--primary);
+  box-shadow: 0 0 4px var(--highlight);
 }
 
 .resume-icon {

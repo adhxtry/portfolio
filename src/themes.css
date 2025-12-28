@@ -29,7 +29,6 @@
 
   /* Catppuccin Mocha - Accent colors */
   --ctp-red: #f38ba8;
-  /* Our main accent color */
   --ctp-maroon: #eba0ac;
   --ctp-peach: #fab387;
   --ctp-yellow: #f9e2af;
@@ -44,23 +43,23 @@
 
   /* Mapped theme variables */
   /* Background */
-  --bg-dark: var(--ctp-crust);
-  --bg: var(--ctp-base);
-  --bg-light: var(--ctp-surface0);
+  --bg-dark: var(--ctp-mantle);
+  --bg: var(--ctp-mantle);
+  --bg-light: var(--ctp-crust);
 
   /* Text */
   --text: var(--ctp-text);
   --text-muted: var(--ctp-subtext0);
-  --text-heading: var(--ctp-pink);
+  --text-heading: var(--ctp-maroon);
 
   /* Border */
   --highlight: var(--ctp-red);
   --border: var(--ctp-surface2);
-  --border-muted: var(--ctp-surface1);
+  --border-muted: var(--ctp-surface0);
 
   /* Action */
-  --primary: var(--ctp-red);
-  --secondary: var(--ctp-mauve);
+  --primary: var(--ctp-teal);
+  --secondary: var(--ctp-yellow);
 
   /* Alert */
   --danger: var(--ctp-red);
@@ -69,13 +68,12 @@
   --info: var(--ctp-blue);
 
   /* Selection colors */
-  --selection-bg: var(--ctp-surface2);
-  --selection-text: var(--ctp-text);
+  --selection-bg: var(--ctp-overlay1);
+  --selection-text: var(--ctp-mantle);
 
   /* Gradients */
-  --text-hover: color-mix(in srgb, var(--text-muted) 40%, var(--text));
-  --gradient-highlight: linear-gradient(to bottom, var(--bg) 0%, var(--bg-light) 100%);
-  --gradient-highlight-dark: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg) 100%);
+  --text-hover: var(--ctp-subtext1);
+  --gradient-highlight: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-light) 100%);
 }
 
 body.light {
@@ -110,8 +108,8 @@ body.light {
 
   /* Mapped theme variables */
   /* Background */
-  --bg-dark: var(--ctp-mantle);
-  --bg: var(--ctp-base);
+  --bg-dark: var(--ctp-base);
+  --bg: var(--ctp-mantle);
   --bg-light: var(--ctp-crust);
 
   /* Text */
@@ -122,11 +120,11 @@ body.light {
   /* Border */
   --highlight: var(--ctp-red);
   --border: var(--ctp-surface2);
-  --border-muted: var(--ctp-surface1);
+  --border-muted: var(--ctp-surface0);
 
   /* Action */
-  --primary: var(--ctp-pink);
-  --secondary: var(--ctp-lavender);
+  --primary: var(--ctp-teal);
+  --secondary: var(--ctp-yellow);
 
   /* Alert */
   --danger: var(--ctp-red);
@@ -135,11 +133,10 @@ body.light {
   --info: var(--ctp-blue);
 
   /* Selection colors */
-  --selection-bg: var(--ctp-surface1);
-  --selection-text: var(--ctp-text);
+  --selection-bg: var(--ctp-overlay1);
+  --selection-text: var(--ctp-mantle);
 
   /* Gradients */
-  --text-hover: color-mix(in srgb, var(--text-muted) 40%, var(--text));
-  --gradient-highlight: linear-gradient(to bottom, var(--bg) 0%, var(--bg-light) 100%);
-  --gradient-highlight-dark: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg) 100%);
+  --text-hover: var(--ctp-subtext1);
+  --gradient-highlight: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-light) 100%);
 }
