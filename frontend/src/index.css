@@ -1,0 +1,8 @@
+img.profile-me {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+  /* Modern browsers */
+  image-rendering: crisp-edges;
+  /* Firefox fallback */
+}
