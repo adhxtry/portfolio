@@ -1,0 +1,31 @@
+/**
+ * Global reset, element defaults, and the desk/paper backdrop.
+ * Component styling lives in co-located *.module.css files.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Selection colors */
+::selection {}
+
+::-moz-selection {}
+
+* {
+  transition: background 0.2s ease-in,
+    color 0.2s ease-in,
+    border-color 0.2s ease-in,
+    box-shadow 0.2s ease-in;
+}
+
+
+/* Check for is motion enabled */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

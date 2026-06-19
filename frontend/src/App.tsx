@@ -12,14 +12,22 @@
  * GNU Affero General Public License for more details.
  */
 
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-function App() {
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Experience from './pages/Experience';
 
+/**
+ * Route table. The router (with basename="/portfolio") is set up in main.tsx.
+ */
+export default function App() {
   return (
-    <>
-      <div>Hello World!</div>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/experience" element={<Experience />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
 }
-
-export default App
