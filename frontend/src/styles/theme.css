@@ -1,3 +1,132 @@
-[data-theme='sepia'] {}
+/* Sepia theme */
+[data-theme='light'] {
+  /* ==========================
+     BACKGROUNDS
+     ========================== */
 
-[data-theme='dark'] {}
+  --bg-primary: #F4EBDD;
+  /* parchment */
+  --bg-secondary: #E8DCC7;
+  /* aged paper */
+  --bg-inverted: #3B2F25;
+  /* walnut ink */
+
+  /* ==========================
+     TEXT
+     ========================== */
+
+  --text-primary: #2E241C;
+  /* dark ink */
+  --text-secondary: #5B4735;
+  --text-muted: #8B735D;
+  --text-inverted: #F8F3EA;
+  --text-highlight: #9C6B2F;
+  /* antique gold */
+
+  /* ==========================
+     BORDERS
+     ========================== */
+
+  --border: #CDBCA3;
+  --border-highlight: #B28A4A;
+
+  /* ==========================
+     INTERACTIVE
+     ========================== */
+
+  --link: #4F6780;
+  --link-hover: #39526B;
+
+  --selection-bg: #E9D6A8;
+  --selection-text: #2E241C;
+
+  --focus-ring: #B28A4A;
+
+
+  /* ==========================
+     SHADOWS
+     ========================== */
+
+  --shadow-color: rgba(70, 52, 35, 0.12);
+
+  /* ==========================
+     ACCENTS
+     ========================== */
+
+  --accent-success: #5D7A4F;
+  /* moss */
+  --accent-warning: #A14D3A;
+  /* oxide red */
+  --accent-info: #56728C;
+  /* dusty blue */
+}
+
+/* Nocturne theme */
+[data-theme='dark'] {
+  /* ==========================
+     BACKGROUNDS
+     ========================== */
+
+  --bg-primary: #211D1A;
+  /* dark walnut */
+
+  --bg-secondary: #2C2723;
+  /* leather */
+
+  --bg-inverted: #F4EBDD;
+  /* parchment */
+
+  /* ==========================
+     TEXT
+     ========================== */
+
+  --text-primary: #E2D9CC;
+  /* warm ivory */
+
+  --text-secondary: #C5BAAB;
+
+  --text-muted: #988F84;
+
+  --text-inverted: #2E241C;
+
+  --text-highlight: #C49A5A;
+  /* antique brass */
+
+  /* ==========================
+     BORDERS
+     ========================== */
+
+  --border: #453D37;
+
+  --border-highlight: #6A5A4D;
+
+  /* ==========================
+     INTERACTIVE
+     ========================== */
+
+  --link: #89A4C4;
+
+  --link-hover: #A4BEDD;
+
+  --selection-bg: #5A4A3A;
+
+  --selection-text: #F3ECE2;
+
+  --focus-ring: #C49A5A;
+
+  /* ==========================
+     SHADOWS
+     ========================== */
+
+  --shadow-color: rgba(0, 0, 0, 0.35);
+
+  /* ==========================
+     SEMANTIC ACCENTS
+     ========================== */
+
+  --accent-success: #79936A;
+
+  --accent-warning: #B56D56;
+
+  --accent-info: #6E8CA8;
+}

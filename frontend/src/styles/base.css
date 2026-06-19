@@ -1,7 +1,5 @@
-/**
- * Global reset, element defaults, and the desk/paper backdrop.
- * Component styling lives in co-located *.module.css files.
- */
+/* Merienda & Sniglet */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Sniglet:wght@400;800&display=swap');
 
 *,
 *::before,
@@ -9,11 +7,27 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Merienda', cursive;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sniglet', cursive;
+}
 
 /* Selection colors */
-::selection {}
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
 
-::-moz-selection {}
+::-moz-selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
 
 * {
   transition: background 0.2s ease-in,
