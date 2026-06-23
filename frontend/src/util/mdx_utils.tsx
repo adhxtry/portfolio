@@ -19,6 +19,20 @@ type MDXComponents = Record<string, ComponentType | string>;
 
 const components: MDXComponents = {
   ...iconComponents,
+  // Open external links in a new tab
+  a: ({ href, ...props }) => {
+    const isExternal =
+      href?.startsWith("http://") || href?.startsWith("https://");
+
+    return (
+      <a
+        href={href}
+        {...props}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+      />
+    );
+  },
 };
 
 /**

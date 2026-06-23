@@ -1,0 +1,21 @@
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  justify-content: space-between;
+}
+
+.page-content {
+  margin: auto 0;
+}
+
+.page-footer {
+  text-align: center;
+  background: var(--bg-secondary);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.page-footer>p {
+  margin: .7rem 0;
+}

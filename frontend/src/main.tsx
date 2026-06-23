@@ -20,18 +20,10 @@ import App from './App.tsx';
 
 import './index.css';
 
-const currentYear = new Date().getFullYear();
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router basename="/portfolio">
       <App />
-      {/* Add a copyright notice */}
-      <footer className="footer">
-        <p>
-          &copy; {currentYear} Adheesh Trivedi. All rights reserved.
-        </p>
-      </footer>
     </Router>
   </StrictMode>,
 );

@@ -18,40 +18,43 @@ import Bio from '../../content/bio.mdx';
 import { wrapMDX } from '../../util/mdx_utils';
 
 import './home.css';
+import PageLayout from '../../components/pagelayout/pagelayout';
 
 
 const BioContent = wrapMDX(Bio);
 
 export default function Home() {
   return (
-    <div className="home-grid">
-      <aside className="home-sidebar">
-        <div className="home-avatar">
-          {/* Different variation of avatar based on theme */}
-          <img
-            src={`${avatarSrcPrefix}-light.png`}
-            alt={avatarAlt}
-            className="avatar-light"
-          />
-          <img
-            src={`${avatarSrcPrefix}-dark.png`}
-            alt={avatarAlt}
-            className="avatar-dark"
-          />
-        </div>
-        <h1 className="home-name">{name}</h1>
-        <p className="home-status">{status}</p>
-        <div className="home-socials">
-          {socials.map(s => (
-            <a key={s.label} href={s.href} title={s.handle}>
-              <s.icon />
-            </a>
-          ))}
-        </div>
-      </aside>
-      <main className="home-content">
-        <BioContent />
-      </main>
-    </div>
+    <PageLayout>
+      <div className="home-grid">
+        <aside className="home-sidebar">
+          <div className="home-avatar">
+            {/* Different variation of avatar based on theme */}
+            <img
+              src={`${avatarSrcPrefix}-light.png`}
+              alt={avatarAlt}
+              className="avatar-light"
+            />
+            <img
+              src={`${avatarSrcPrefix}-dark.png`}
+              alt={avatarAlt}
+              className="avatar-dark"
+            />
+          </div>
+          <h1 className="home-name">{name}</h1>
+          <p className="home-status">{status}</p>
+          <div className="home-socials">
+            {socials.map(s => (
+              <a key={s.label} href={s.href} title={s.handle}>
+                <s.icon />
+              </a>
+            ))}
+          </div>
+        </aside>
+        <main className="home-content">
+          <BioContent />
+        </main>
+      </div>
+    </PageLayout>
   );
 }
