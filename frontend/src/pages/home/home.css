@@ -18,9 +18,6 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 3rem;
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 2rem;
   align-items: center;
 }
 
@@ -35,26 +32,36 @@
 /* ---- Avatar ---- */
 
 .home-avatar {
+  position: relative;
   width: 12rem;
   height: 12rem;
   margin-bottom: 0.75rem;
 }
 
 .home-avatar>img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   image-rendering: pixelated;
+  transition: opacity 0.2s ease-in;
 }
 
-/* ---- Avatar Switching with theme ---- */
+.home-avatar .avatar-light {
+  opacity: 1;
+}
 
-.home-avatar .avatar-dark,
+.home-avatar .avatar-dark {
+  opacity: 0;
+}
+
 [data-theme="dark"] .home-avatar .avatar-light {
-  display: none;
+  opacity: 0;
 }
 
 [data-theme="dark"] .home-avatar .avatar-dark {
-  display: block;
+  opacity: 1;
 }
 
 /* ---- Name / Status / Socials ---- */
@@ -77,6 +84,5 @@
   .home-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 1rem;
   }
 }

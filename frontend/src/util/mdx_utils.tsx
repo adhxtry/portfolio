@@ -12,22 +12,23 @@
  * GNU Affero General Public License for more details.
  */
 
-import type { ComponentType } from 'react';
+import type { ComponentType, ComponentPropsWithoutRef } from 'react';
 import { iconComponents } from '../components/icons';
 
 type MDXComponents = Record<string, ComponentType | string>;
 
 const components: MDXComponents = {
   ...iconComponents,
-  // Open external links in a new tab
-  a: ({ href, ...props }) => {
+  // Opens external links in a new tab
+  a: (props: ComponentPropsWithoutRef<'a'>) => {
+    const { href, ...rest } = props;
     const isExternal =
       href?.startsWith("http://") || href?.startsWith("https://");
 
     return (
       <a
         href={href}
-        {...props}
+        {...rest}
         target={isExternal ? "_blank" : undefined}
         rel={isExternal ? "noopener noreferrer" : undefined}
       />

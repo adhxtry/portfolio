@@ -14,12 +14,13 @@ frontend/               # entire app
         home.tsx        # responsive grid: sidebar (avatar, name, status, socials) + main (bio)
         home.css
     components/
+      pagelayout/
+        pagelayout.tsx   # <PageLayout> wrapper for all pages: content + footer
+        pagelayout.css
       icons.tsx         # iconComponents map (IconGithub, IconInstitute, IconXTwitter, etc.)
     content/
       data.ts           # profile config: name, email, resumeUrl, avatar prefix, socials[]
       bio.mdx           # bio body rendered by home.tsx via wrapMDX
-      projects.ts       # ProjectGroup[] with Entry[]
-      experience.ts     # ExperienceGroup[] with Entry[]
     util/
       mdx_utils.tsx     # wrapMDX(Module) — injects icon components into any MDX file
     styles/
