@@ -75,6 +75,12 @@ a:hover {
   color: var(--link-hover);
 }
 
+a,
+em,
+b {
+  display: inline-block;
+}
+
 /* Selection colors */
 ::selection {
   background: var(--selection-bg);
