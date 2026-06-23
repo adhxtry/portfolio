@@ -12,13 +12,33 @@
  * GNU Affero General Public License for more details.
  */
 
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/home/home.tsx';
 
-export default function App() {
-  return (
-    <Routes>
-      <Route index element={<Home />} />
-    </Routes>
-  );
-}
+export type LinkIcon =
+  | 'github'
+  | 'dropbox'
+  | 'file'
+  | 'book'
+  | 'link'
+  | 'chalkboard';
+
+export type EntryLink = {
+  /** Brand/object icon rendered as the link's visible text (as in cv.typ). */
+  icon: LinkIcon;
+  href: string;
+  /** Accessible label / tooltip (e.g. "GitHub repository"). */
+  label?: string;
+};
+
+export type Entry = {
+  title?: string;
+  /** Mentor, institution, company, etc. */
+  affiliation?: string;
+  date?: string | {
+    from: string;
+    to: string | null;
+  };
+  location?: string;
+  links?: EntryLink[];
+  bullets?: string[];
+  tags?: string[];
+};

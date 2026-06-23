@@ -1,0 +1,100 @@
+/*
+ * Copyright (C) 2025 Adheesh Trivedi <adheeshtrivedi@gmail.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ */
+
+/* ---- Layout ---- */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3em;
+  max-width: 64em;
+  margin: 2em auto;
+  padding: 2em;
+  align-items: center;
+}
+
+.home-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 200px;
+}
+
+.home-content {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ---- Avatar ---- */
+
+.home-avatar {
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 0.75em;
+}
+
+.home-avatar img {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+/* ---- Avatar Switching with theme ---- */
+
+.home-avatar .avatar-dark,
+[data-theme="dark"] .home-avatar .avatar-light {
+  display: none;
+}
+
+[data-theme="dark"] .home-avatar .avatar-dark {
+  display: block;
+}
+
+/* ---- Name / Status / Socials ---- */
+
+.home-name {
+  margin: 0;
+}
+
+.home-status {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.5em;
+}
+
+.home-socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+
+.home-socials a {
+  color: var(--link);
+}
+
+.home-socials a:hover {
+  color: var(--link-hover);
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 770px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1em;
+  }
+}

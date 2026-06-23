@@ -12,13 +12,15 @@
  * GNU Affero General Public License for more details.
  */
 
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/home/home.tsx';
+declare module "*.mdx" {
+  import type { ComponentType } from "react";
 
-export default function App() {
-  return (
-    <Routes>
-      <Route index element={<Home />} />
-    </Routes>
-  );
+  type MDXComponents = Record<string, ComponentType | string>;
+
+  type MDXProps = {
+    components?: MDXComponents;
+  };
+
+  const MDXComponent: ComponentType<MDXProps>;
+  export default MDXComponent;
 }
