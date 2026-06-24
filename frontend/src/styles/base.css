@@ -69,16 +69,11 @@ em {
 a {
   color: var(--link);
   text-decoration: none;
+  display: inline-block;
 }
 
 a:hover {
   color: var(--link-hover);
-}
-
-a,
-em,
-b {
-  display: inline-block;
 }
 
 /* Selection colors */

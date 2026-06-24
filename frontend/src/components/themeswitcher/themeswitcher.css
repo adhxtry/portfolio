@@ -15,7 +15,7 @@
 .theme-switcher {
   position: fixed;
   top: 0;
-  right: 2rem;
+  right: max(2rem, (100dvw - 64rem) / 2);
   z-index: 9999;
   background: none;
   border: none;

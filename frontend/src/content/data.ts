@@ -18,7 +18,13 @@ export const name = 'Adheesh Trivedi';
 export const resumeUrl = 'https://adhxtry.github.io/adhxtry/cv_adheesh.pdf';
 export const avatarSrcPrefix = './pixel-me';
 export const avatarAlt = 'Pixel-art avatar of me';
-export const status = 'Student @ IISc';
+export const statuses = [
+  'MTech Student @ IISc',
+  'Music 🎸',
+  'Pointless typing 🐵',
+  'Technologia 🤓',
+  'Theoremaxxing 🧠',
+];
 
 export const socials = [
   {

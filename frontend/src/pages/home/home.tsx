@@ -13,12 +13,13 @@
  */
 
 
-import { name, avatarSrcPrefix, avatarAlt, status, socials } from '../../content/data';
+import { name, avatarSrcPrefix, avatarAlt, statuses, socials } from '../../content/data';
 import Bio from '../../content/bio.mdx';
 import { wrapMDX } from '../../util/mdx_utils';
 
 import './home.css';
 import PageLayout from '../../components/pagelayout/pagelayout';
+import Carousel from '../../components/carousel/carousel';
 
 
 const BioContent = wrapMDX(Bio);
@@ -42,7 +43,9 @@ export default function Home() {
             />
           </div>
           <h1 className="home-name">{name}</h1>
-          <p className="home-status">{status}</p>
+          <div className="home-status">
+            <Carousel items={statuses} speed={5} height='1.7rem' />
+          </div>
           <div className="home-socials">
             {socials.map(s => (
               <a key={s.label} href={s.href} title={s.handle}>

@@ -26,7 +26,6 @@ frontend/               # entire app
     styles/
       theme.css         # CSS custom props per data-theme (light/dark)
       base.css          # reset, fonts (Merienda body, Lato headings)
-    types.ts            # Entry, EntryLink, Social, LinkIcon
     mdx.d.ts            # *.mdx module declaration with components prop
     index.css           # @import theme.css → base.css; global avatar-light/dark rules
   index.html            # GA conditional load via %VITE_GA_ID%

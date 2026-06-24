@@ -1,0 +1,17 @@
+.carousel-item {
+  display: inline-flex;
+  animation: fadeIn 0.4s ease-in-out;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
