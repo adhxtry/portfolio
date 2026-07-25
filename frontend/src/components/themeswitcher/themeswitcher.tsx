@@ -72,8 +72,8 @@ export default function ThemeSwitcher() {
 
         {/* Pull-rope with diamond-shaped knob */}
         <g className="rope">
-          <line x1="38" y1="-20" x2="38" y2="90" stroke="currentColor" strokeWidth="2" />
-          <polygon points="38,95 42,102 38,109 34,102" fill="currentColor" />
+          <line x1="38" y1="-24" x2="38" y2="86" stroke="currentColor" strokeWidth="2" />
+          <polygon points="38,85 42,95 38,105 34,95" fill="currentColor" />
         </g>
       </svg>
     </button>
