@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <h1 className="home-name">{name}</h1>
           <div className="home-status">
-            <Carousel items={statuses} speed={5} height='1.7rem' />
+            <Carousel items={statuses} speed={3} height='1.7rem' />
           </div>
           <div className="home-socials">
             {socials.map(s => (
